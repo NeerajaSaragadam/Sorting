@@ -13,9 +13,10 @@ s[x]=$x
 s[y]=$y
 s[z]=$z
 
-array=("$w" "$x" "$y" "$z")
+# array=("$w" "$x" "$y" "$z")
+array = (${dict[*]})
 echo "Array is ${array[@]}"
-size=4
+size=${#array[*]}
 
 for((i=0;i<=size-1;i++))
 do
